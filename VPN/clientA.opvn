@@ -1,0 +1,31 @@
+client
+dev tun
+proto udp
+remote YOUR_SERVER_PUBLIC_IP 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+
+remote-cert-tls server
+tls-version-min 1.2
+auth SHA256
+data-ciphers AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305
+verb 3
+
+# MTU tune for reliability over NATs
+tun-mtu 1420
+mssfix 0
+
+<ca>
+# paste /etc/openvpn/easy-rsa/pki/ca.crt
+</ca>
+<cert>
+# paste /etc/openvpn/easy-rsa/pki/issued/clientA.crt
+</cert>
+<key>
+# paste /etc/openvpn/easy-rsa/pki/private/clientA.key
+</key>
+<tls-crypt>
+# paste /etc/openvpn/ta.key
+</tls-crypt>

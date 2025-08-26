@@ -1,0 +1,13 @@
+<CycloneDDS>
+  <Domain id="any">
+    <General>
+      <NetworkInterfaceAddress>10.8.0.20</NetworkInterfaceAddress>
+      <AllowMulticast>false</AllowMulticast>
+    </General>
+    <Discovery>
+      <Peers>
+        <Peer address="10.8.0.10"/>
+      </Peers>
+    </Discovery>
+  </Domain>
+</CycloneDDS>
