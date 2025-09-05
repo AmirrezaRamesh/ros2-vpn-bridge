@@ -110,9 +110,9 @@ sudo systemctl enable --now openvpn-client@clientA.service
 
 3. Test the connection on Machine A(and Machine B if you want):
 ```bash
-ping -c 3 10.8.0.1 #Server
+ping -c 10 10.8.0.1 #Server
 
-ping -c 10.8.0.20 #Machine B
+ping -c 10 10.8.0.20 #Machine B
 ```
 If you could ping them, the VPN set up is done correctly!
 
